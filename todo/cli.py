@@ -16,10 +16,8 @@ while True:
   elif user_action.startswith('show'):
     for index, item in enumerate(todos):
       row = f"{index +1}: {item}"
-      print(row)
 
   elif user_action.startswith('edit'):
-    print(todos)
     try:
       number = int(user_action[5:])
       number -= 1
@@ -48,7 +46,6 @@ while True:
 
 
   elif user_action.startswith('exit'):
-    print(todos)
     tf.write_todos(todos)
     break
 
